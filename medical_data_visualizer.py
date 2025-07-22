@@ -7,7 +7,14 @@ import numpy as np
 df = pd.read_csv('medacl_examination.csv')
 
 # 2
-df['overweight'] = df[df['Weight']/(df['Height']/100)**2]
+def bmi(df):
+  if (df['weight'] / ((df['height']/100)**2)) > 25:
+    return 1
+  else:
+    return 0
+
+df['overweight'] = df.apply(bmi, axis =1)
+
 
 # 3
 
