@@ -17,6 +17,13 @@ df['overweight'] = df.apply(bmi, axis =1)
 
 
 # 3
+def normalize(df):
+  if df['gluc'] == 1 or df['cholesterol'] == 1:
+    return 0
+  else:
+    return 1
+df['gluc'] = df.apply(normalize, axis = 1)
+df['cholesterol'] = df.apply(normalize, axis = 1)
 
 
 # 4
