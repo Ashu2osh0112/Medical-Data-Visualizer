@@ -88,8 +88,3 @@ def draw_heat_map():
   # 16
     fig.savefig('heatmap.png')
     return fig
-
-
-    # Do not modify the next two lines
-    fig.savefig('heatmap.png')
-    return fig
